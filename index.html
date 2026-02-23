@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Contatos</h1>
+        
+        <!-- Campo de filtro -->
+        <div class="filter-section">
+            <label for="filter">Filtrar contatos:</label>
+            <input type="text" id="filter" placeholder="Digite o nome para filtrar...">
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <div class="form-section">
+            <h2>Cadastrar Contato</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Total de contatos -->
+        <div class="total-contacts">
+            <strong>Total de contatos cadastrados:</strong> <span id="totalCount">0</span>
+        </div>
+
+        <!-- Tabela de contatos -->
+        <table class="contacts-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="contactsList">
+                <!-- Os contatos serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
